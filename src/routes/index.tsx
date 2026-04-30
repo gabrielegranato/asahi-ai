@@ -361,28 +361,28 @@ function Method() {
     { k: "Factory", v: "Scaliamo i pattern in prodotti e moduli." },
   ];
   return (
-    <section id="metodo" className="bg-ink-warm text-background relative overflow-hidden">
-      <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-30 sun-disc rounded-full" />
+    <section id="metodo" className="bg-ink-warm text-foreground relative overflow-hidden">
+      <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-25 sun-disc rounded-full" />
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36 relative">
-        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-background/60 mb-10">
-          <span className="inline-block h-px w-8 bg-background/60" />
+        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-foreground/60 mb-10">
+          <span className="inline-block h-px w-8 bg-foreground/40" />
           04 — Metodo
         </div>
         <h2 className="font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[1000px] text-balance">
           Dall’<span className="italic">idea</span> al prodotto
-          in quattro fasi <span className="text-asahi">misurabili</span>.
+          in quattro fasi <span className="text-asahi-deep">misurabili</span>.
         </h2>
 
-        <ol className="mt-16 grid md:grid-cols-4 gap-px bg-background/15 border border-background/15">
+        <ol className="mt-16 grid md:grid-cols-4 gap-5">
           {steps.map((s, i) => (
-            <li key={s.k} className="bg-ink-warm p-8">
-              <div className="number-marker text-[36px] text-asahi leading-none">
+            <li key={s.k} className="bg-cta-soft border border-cta-border rounded-sm p-8">
+              <div className="number-marker text-[36px] text-asahi-deep leading-none">
                 0{i + 1}
               </div>
-              <div className="mt-6 font-serif text-[24px] tracking-[-0.01em]">
+              <div className="mt-6 font-serif text-[24px] tracking-[-0.01em] text-foreground">
                 {s.k}
               </div>
-              <p className="mt-3 text-[15px] text-background/70 max-w-[260px]">
+              <p className="mt-3 text-[15px] text-ink-soft max-w-[260px]">
                 {s.v}
               </p>
             </li>
