@@ -162,32 +162,6 @@ function Hero() {
   );
 }
 
-/* ----------------------------- MARQUEE ----------------------------- */
-function Marquee() {
-  const items = [
-    "Adozione misurabile",
-    "Governance dell’AI",
-    "Processi reali",
-    "Asahi AI Score",
-    "Asahi AI Builder",
-    "Asahi AI Canvas",
-    "Software Factory",
-    "Autonomia, non dipendenza",
-  ];
-  const row = [...items, ...items];
-  return (
-    <div className="border-y hairline bg-paper-2 overflow-hidden">
-      <div className="marquee-track flex gap-12 py-5 text-[13px] uppercase tracking-[0.28em] text-ink-soft">
-        {row.map((t, i) => (
-          <span key={i} className="flex items-center gap-12">
-            {t}
-            <span className="h-1 w-1 rounded-full bg-asahi" />
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 /* ----------------------------- THESIS ----------------------------- */
 function Thesis() {
