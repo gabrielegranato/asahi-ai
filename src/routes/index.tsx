@@ -145,7 +145,7 @@ function Hero() {
   return (
     <section id="top" className="relative overflow-hidden grain">
       {/* Sun composition — vertically centered with hero */}
-      <div className="pointer-events-none absolute right-[-12%] top-1/2 -translate-y-1/2 w-[520px] h-[520px] md:w-[620px] md:h-[620px] lg:w-[720px] lg:h-[720px] opacity-95">
+      <div className="pointer-events-none absolute right-[-18%] top-[56%] -translate-y-1/2 w-[500px] h-[500px] md:right-[-12%] md:top-1/2 md:w-[620px] md:h-[620px] lg:w-[720px] lg:h-[720px] opacity-80 md:opacity-95">
         <div className="absolute inset-0 sun-halo" />
         <div className="absolute inset-[20%] rounded-full sun-disc sun-pulse" />
       </div>
@@ -166,11 +166,11 @@ function Hero() {
         </h1>
 
         <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
-          <p className="md:col-span-7 text-[19px] md:text-[24px] leading-[1.6] tracking-[-0.01em] text-ink-soft text-pretty max-w-[700px]">
-            Partiamo dai tuoi processi per costruire soluzioni AI utili, adottabili e misurabili. Trasferiamo capacità, governance e risultati: l’obiettivo è creare autonomia, non dipendenza.
+          <p className="md:col-span-6 text-[17px] md:text-[20px] leading-[1.75] tracking-[-0.005em] text-ink-soft text-pretty max-w-[34ch]">
+            Partiamo dai tuoi processi per costruire soluzioni AI utili, adottabili e misurabili. Creiamo autonomia, con metodo e risultati concreti.
           </p>
 
-          <div className="md:col-span-5 flex flex-col gap-3">
+          <div className="md:col-span-5 md:col-start-8 flex flex-col gap-3">
             <a
               href="#modello"
               className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-soft border border-cta-border text-cta-primary-text hover:bg-cta-soft-hover transition-colors rounded-sm"
