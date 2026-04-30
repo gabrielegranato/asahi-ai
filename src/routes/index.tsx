@@ -53,7 +53,7 @@ function Nav() {
         <a href="#top" className="flex items-baseline gap-3 group">
           <SunMark className="h-7 w-7 self-center" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
-          <span className="hidden lg:inline font-serif italic text-[12px] text-ink-soft leading-none border-l hairline pl-3 ml-1">
+          <span className="hidden md:inline font-serif italic text-[12px] lg:text-[13px] text-ink-soft leading-none border-l hairline pl-3 ml-1">
             Humanizing Artificial Intelligence
           </span>
         </a>
