@@ -28,12 +28,12 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans antialiased">
       <Nav />
       <Hero />
-      
+
       <Thesis />
       <FourBlocks />
+      <Percorso />
       <Assets />
-      <Method />
-      
+
       <Footer />
     </div>
   );
@@ -45,8 +45,8 @@ function Nav() {
   const links = [
     { href: "#tesi", label: "Tesi" },
     { href: "#modello", label: "Modello" },
+    { href: "#percorso", label: "Percorso" },
     { href: "#asset", label: "Asset" },
-    { href: "#metodo", label: "Metodo" },
   ];
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/75 border-b hairline">
@@ -54,6 +54,9 @@ function Nav() {
         <a href="#top" className="flex items-baseline gap-3 group">
           <SunMark className="h-7 w-7 self-center" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
+          <span className="hidden lg:inline font-serif italic text-[12px] text-ink-soft leading-none border-l hairline pl-3 ml-1">
+            Humanizing Artificial Intelligence
+          </span>
         </a>
         <nav className="hidden md:flex items-center gap-2 text-[13px]">
           {links.map((l) => (
@@ -151,6 +154,11 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-14 md:pt-20 pb-20 md:pb-28 relative">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cta-soft border border-cta-border text-[11px] uppercase tracking-[0.28em] text-cta-text mb-8">
+          <span className="h-1.5 w-1.5 rounded-full bg-asahi" />
+          AI Adoption-as-a-Service
+        </div>
+
         <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
           dove <span className="italic">tu</span> crei <span className="relative inline-block">
@@ -160,19 +168,19 @@ function Hero() {
         </h1>
 
         <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
-          <p className="md:col-span-6 text-[16px] md:text-[19px] leading-[1.8] tracking-[-0.003em] text-ink-soft text-pretty max-w-[32ch]">
-            Partiamo dai tuoi processi per costruire un’AI utile, adottabile e misurabile, lasciando competenze e controllo in azienda.
+          <p className="md:col-span-6 text-[16px] md:text-[19px] leading-[1.75] tracking-[-0.003em] text-ink-soft text-pretty max-w-[46ch]">
+            Asahi aiuta le aziende a integrare l’AI nei processi aziendali, con governance chiara, KPI misurabili, AI Mentors interni e soluzioni proprietarie costruite sui problemi reali.
           </p>
 
           <div className="md:col-span-5 md:col-start-8 flex flex-col gap-3">
             <a
-              href="#modello"
+              href="#percorso"
               className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-soft border border-cta-border text-cta-primary-text hover:bg-cta-soft-hover transition-colors rounded-sm"
             >
               <span className="flex flex-col gap-1">
-                <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft">Il metodo</span>
+                <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft">Il percorso</span>
                 <span className="font-serif text-[20px] md:text-[22px] tracking-[-0.01em] leading-none">
-                  Esplora il <span className="italic">Framework</span> Asahi
+                  Scopri il <span className="italic">Percorso</span> Asahi
                 </span>
               </span>
               <span className="text-xl transition-transform group-hover:translate-x-1">→</span>
@@ -262,7 +270,7 @@ function FourBlocks() {
     {
       n: "04",
       kicker: "Master",
-      title: "Asahi Academy",
+      title: "Formazione Avanzata",
       body:
         "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
       tag: "Team & AI Mentors",
@@ -313,112 +321,124 @@ function FourBlocks() {
   );
 }
 
+/* ----------------------------- PERCORSO ASAHI ----------------------------- */
+function Percorso() {
+  const phases = [
+    { n: "01", k: "Discover", v: "Validiamo segnali, processi, rischi, ownership e casi d’uso prioritari." },
+    { n: "02", k: "Design", v: "Trasformiamo la diagnosi in roadmap, governance, KPI e responsabilità." },
+    { n: "03", k: "Activate", v: "Portiamo live il primo caso d’uso e attiviamo gli AI Mentors interni." },
+    { n: "04", k: "Scale", v: "Estendiamo l’adozione con SOP, dashboard, knowledge base e nuovi processi." },
+    { n: "05", k: "Sustain", v: "Manteniamo l’AI come capacità stabile, osservabile e governata nel tempo." },
+  ];
+
+  return (
+    <section id="percorso" className="bg-ink-warm relative overflow-hidden">
+      <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-25 sun-disc rounded-full pointer-events-none" />
+      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36 relative">
+        <SectionLabel n="03" label="Come lavoriamo con te" />
+        <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
+          <h2 className="md:col-span-7 font-serif text-[40px] md:text-[60px] leading-[1.04] tracking-[-0.02em] text-balance">
+            Il <span className="italic">Percorso</span> Asahi, dalla
+            consapevolezza all’<span className="text-asahi-deep">autonomia</span>.
+          </h2>
+          <p className="md:col-span-5 md:pt-4 text-[17px] md:text-[18px] text-ink-soft text-pretty max-w-[520px]">
+            Un percorso in cinque fasi per trasformare l’interesse verso l’AI in adozione reale, governata e misurabile nei processi aziendali.
+          </p>
+        </div>
+
+        {/* Timeline */}
+        <div className="mt-16 relative">
+          {/* Connecting line — desktop */}
+          <div className="hidden md:block absolute left-0 right-0 top-[34px] h-px bg-rule" />
+          <ol className="grid md:grid-cols-5 gap-6 md:gap-4 relative">
+            {phases.map((p) => (
+              <li key={p.n} className="relative">
+                <div className="flex md:block items-center gap-4">
+                  <span className="relative z-10 inline-flex items-center justify-center h-[68px] w-[68px] rounded-full bg-background border border-cta-border text-asahi-deep number-marker text-[24px] shrink-0 shadow-sm">
+                    {p.n}
+                  </span>
+                  <div className="md:mt-6">
+                    <div className="font-serif text-[24px] md:text-[26px] tracking-[-0.01em] text-foreground leading-tight">
+                      {p.k}
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-3 md:mt-3 text-[14.5px] md:text-[15px] text-ink-soft leading-[1.55] max-w-[230px] text-pretty">
+                  {p.v}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ----------------------------- ASSETS ----------------------------- */
 function Assets() {
   const assets = [
     {
       name: "Asahi AI Score",
-      role: "Qualifica il terreno",
+      role: "Qualifica il contesto",
       body:
-        "Pre-diagnosi rapida della maturità AI organizzativa. Non è un audit e non valuta i casi d’uso: dice se sei pronto a partire.",
+        "Radar rapido di pre-diagnosi. Misura la distanza organizzativa dall’autonomia operativa e apre la domanda verso le fasi successive.",
     },
     {
       name: "Asahi AI Builder",
       role: "Valuta i casi d’uso",
       body:
-        "Dallo Stage 1 in poi: readiness, rischio, priorità operative. Trasforma idee in iniziative pesabili e ordinabili.",
+        "Dallo Stadio 1 in poi valuta readiness, rischio, priorità e decisioni operative. Non è un quiz di lead generation.",
     },
     {
       name: "Asahi AI Canvas",
       role: "Governa l’esecuzione",
       body:
-        "Responsabilità, KPI, rischi e adozione nel tempo. È il quadro che tiene insieme persone, processi e tecnologia.",
+        "Allinea ruoli, responsabilità, KPI, rischi e adozione nel tempo. Trasforma ogni progetto AI in standard operativo.",
     },
     {
       name: "Software Factory",
-      role: "Scala i pattern",
+      role: "Scala il prodotto",
       body:
-        "Trasforma pattern ricorrenti in soluzioni AI, dashboard e prodotti riutilizzabili. Dalla pratica al prodotto.",
+        "Trasforma pattern ricorrenti in moduli, dashboard, prodotti verticali e soluzioni proprietarie costruite su problemi reali.",
     },
   ];
 
   return (
     <section id="asset" className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-40">
-      <SectionLabel n="03" label="Asset proprietari" />
+      <SectionLabel n="04" label="Asset proprietari" />
       <div className="mt-8 grid md:grid-cols-12 gap-10">
-        <h2 className="md:col-span-6 font-serif text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] text-balance">
-          La nostra <span className="italic">tecnologia</span><br />
-          al servizio dei<br />tuoi <span className="italic">processi</span>.
+        <h2 className="md:col-span-7 font-serif text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] text-balance">
+          Gli asset che rendono il <span className="italic">metodo</span> replicabile.
         </h2>
-        <p className="md:col-span-6 md:pt-6 text-[18px] text-ink-soft max-w-[520px] text-pretty">
-          Non un metodo astratto: quattro asset proprietari che entrano nel tuo
-          contesto, qualificano, valutano, governano e scalano.
+        <p className="md:col-span-5 md:pt-6 text-[18px] text-ink-soft max-w-[520px] text-pretty">
+          Score, Builder, Canvas e Software Factory: ogni strumento presidia un momento diverso del percorso di adozione dell’AI.
         </p>
       </div>
 
-      <ol className="mt-16 divide-y hairline border-y hairline">
+      <div className="mt-16 grid md:grid-cols-2 gap-px bg-rule border hairline">
         {assets.map((a, i) => (
-          <li
+          <article
             key={a.name}
-            className="grid md:grid-cols-12 gap-6 md:gap-10 py-8 md:py-10 group"
+            className="bg-background p-8 md:p-12 group hover:bg-paper transition-colors"
           >
-            <div className="md:col-span-1 number-marker text-[28px] text-ink-soft">
-              0{i + 1}
-            </div>
-            <div className="md:col-span-4">
-              <h3 className="font-serif text-[26px] md:text-[30px] tracking-[-0.01em] leading-tight">
-                {a.name}
-              </h3>
-              <div className="mt-1 text-[12px] uppercase tracking-[0.28em] text-asahi">
+            <div className="flex items-start justify-between mb-8">
+              <span className="number-marker text-[36px] text-asahi-deep leading-none">
+                0{i + 1}
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.32em] text-asahi inline-flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-asahi" />
                 {a.role}
-              </div>
+              </span>
             </div>
-            <p className="md:col-span-7 text-[16px] md:text-[18px] text-ink-soft text-pretty md:pt-2 max-w-[680px]">
+            <h3 className="font-serif text-[28px] md:text-[32px] tracking-[-0.01em] leading-tight">
+              {a.name}
+            </h3>
+            <p className="mt-4 text-[16px] text-ink-soft max-w-[460px] text-pretty">
               {a.body}
             </p>
-          </li>
+          </article>
         ))}
-      </ol>
-    </section>
-  );
-}
-
-/* ----------------------------- METHOD ----------------------------- */
-function Method() {
-  const steps = [
-    { k: "Score", v: "Qualifichiamo il terreno e la prontezza." },
-    { k: "Builder", v: "Valutiamo casi d’uso, readiness e priorità." },
-    { k: "Canvas", v: "Governiamo esecuzione, KPI e adozione." },
-    { k: "Factory", v: "Scaliamo i pattern in prodotti e moduli." },
-  ];
-  return (
-    <section id="metodo" className="bg-ink-warm text-foreground relative overflow-hidden">
-      <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-25 sun-disc rounded-full" />
-      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36 relative">
-        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-foreground/60 mb-10">
-          <span className="inline-block h-px w-8 bg-foreground/40" />
-          04 — Metodo
-        </div>
-        <h2 className="font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[1000px] text-balance">
-          Dall’<span className="italic">idea</span> al prodotto
-          in quattro fasi <span className="text-asahi-deep">misurabili</span>.
-        </h2>
-
-        <ol className="mt-16 grid md:grid-cols-4 gap-5">
-          {steps.map((s, i) => (
-            <li key={s.k} className="bg-cta-soft border border-cta-border rounded-sm p-8">
-              <div className="number-marker text-[36px] text-asahi-deep leading-none">
-                0{i + 1}
-              </div>
-              <div className="mt-6 font-serif text-[24px] tracking-[-0.01em] text-foreground">
-                {s.k}
-              </div>
-              <p className="mt-3 text-[15px] text-ink-soft max-w-[260px]">
-                {s.v}
-              </p>
-            </li>
-          ))}
-        </ol>
       </div>
     </section>
   );
@@ -449,7 +469,7 @@ function Footer() {
             <li>Formazione Adoption</li>
             <li>Consulenza</li>
             <li>Software Factory</li>
-            <li>Asahi Academy</li>
+            <li>Formazione Avanzata</li>
           </ul>
         </div>
 
