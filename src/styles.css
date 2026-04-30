@@ -67,6 +67,8 @@
   --color-rule: var(--rule);
   --color-asahi: var(--asahi);
   --color-asahi-deep: var(--asahi-deep);
+  --color-asahi-gold: var(--asahi-gold);
+  --color-asahi-glow: var(--asahi-glow);
   --font-serif: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter Tight", system-ui, sans-serif;
   --font-jp: "Noto Serif JP", serif;
