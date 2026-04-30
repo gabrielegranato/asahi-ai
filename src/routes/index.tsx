@@ -53,7 +53,7 @@ function Nav() {
         </nav>
         <a
           href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-asahi-deep text-background hover:brightness-110 transition"
+          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors rounded-sm"
         >
           Conversazione strategica
           <span aria-hidden>→</span>
