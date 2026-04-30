@@ -326,8 +326,8 @@ function Assets() {
       <SectionLabel n="03" label="Asset proprietari" />
       <div className="mt-8 grid md:grid-cols-12 gap-10">
         <h2 className="md:col-span-6 font-serif text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] text-balance">
-          Strumenti nostri,<br />
-          <span className="italic">disegnati</span> per <br />l’adozione reale.
+          La nostra <span className="italic">tecnologia</span><br />
+          al servizio dei<br />tuoi <span className="italic">processi</span>.
         </h2>
         <p className="md:col-span-6 md:pt-6 text-[18px] text-ink-soft max-w-[520px] text-pretty">
           Non un metodo astratto: quattro asset proprietari che entrano nel tuo
