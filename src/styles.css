@@ -195,18 +195,30 @@
     letter-spacing: 0.4em;
   }
 
-  /* Rising-sun radial */
+  /* Warm sunrise sun — soft gradient with inner glow */
   .sun-disc {
-    background: radial-gradient(circle at center, var(--asahi) 0%, var(--asahi) 58%, transparent 60%);
+    background:
+      radial-gradient(circle at 38% 38%, var(--asahi-glow) 0%, var(--asahi-gold) 28%, var(--asahi) 62%, var(--asahi-deep) 100%);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--asahi-deep) 25%, transparent),
+      0 6px 24px -6px color-mix(in oklab, var(--asahi) 55%, transparent),
+      inset 0 0 14px color-mix(in oklab, var(--asahi-glow) 70%, transparent);
   }
 
   .sun-rays {
     background: repeating-conic-gradient(
       from 0deg at 50% 50%,
-      var(--asahi) 0deg 6deg,
-      transparent 6deg 18deg
+      var(--asahi) 0deg 5deg,
+      transparent 5deg 18deg
     );
-    mask-image: radial-gradient(circle at center, black 0%, black 35%, transparent 70%);
+    mask-image: radial-gradient(circle at center, transparent 0%, transparent 38%, black 46%, transparent 78%);
+  }
+
+  .sun-halo {
+    background: radial-gradient(circle at center,
+      color-mix(in oklab, var(--asahi-glow) 70%, transparent) 0%,
+      color-mix(in oklab, var(--asahi-gold) 30%, transparent) 35%,
+      transparent 70%);
   }
 
   .grain {
