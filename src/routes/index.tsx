@@ -376,7 +376,7 @@ function Method() {
 
         <ol className="mt-16 grid md:grid-cols-4 gap-px bg-background/15 border border-background/15">
           {steps.map((s, i) => (
-            <li key={s.k} className="bg-foreground p-8">
+            <li key={s.k} className="bg-ink-warm p-8">
               <div className="number-marker text-[36px] text-asahi leading-none">
                 0{i + 1}
               </div>
