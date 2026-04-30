@@ -256,7 +256,7 @@ function FourBlocks() {
   const blocks = [
     {
       n: "01",
-      jp: "教育",
+      kicker: "Activate",
       title: "Formazione Adoption",
       body:
         "Attiviamo i decision maker e generiamo domanda qualificata. Linguaggio comune, criteri di scelta, casi reali.",
@@ -264,7 +264,7 @@ function FourBlocks() {
     },
     {
       n: "02",
-      jp: "戦略",
+      kicker: "Align",
       title: "Consulenza",
       body:
         "Trasformiamo processi, governance, ruoli, KPI e adozione. Dal cantiere al modello operativo che regge nel tempo.",
@@ -272,7 +272,7 @@ function FourBlocks() {
     },
     {
       n: "03",
-      jp: "工房",
+      kicker: "Build",
       title: "Software Factory",
       body:
         "Costruiamo prodotti e moduli AI a partire dai pattern ricorrenti emersi sul campo. Soluzioni scalabili, non one-off.",
@@ -280,7 +280,7 @@ function FourBlocks() {
     },
     {
       n: "04",
-      jp: "熟達",
+      kicker: "Master",
       title: "Formazione Avanzata",
       body:
         "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
