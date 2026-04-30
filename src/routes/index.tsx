@@ -130,7 +130,7 @@ function Hero() {
               href="#modello"
               className="inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-soft border border-cta-border text-cta-primary-text hover:bg-cta-soft-hover transition-colors rounded-sm"
             >
-              <span className="text-[15px]">Scopri il modello in 4 blocchi</span>
+              <span className="text-[15px]">Scopri il Framework Asahi</span>
               <span className="text-xl">↓</span>
             </a>
           </div>
