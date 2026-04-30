@@ -45,12 +45,12 @@ function Nav() {
           <SunMark className="h-7 w-7" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
         </a>
-        <nav className="hidden md:flex items-center gap-9 text-[13px] text-ink-soft">
-          <a href="#tesi" className="hover:text-foreground transition">Tesi</a>
-          <a href="#modello" className="hover:text-foreground transition">Modello</a>
-          <a href="#asset" className="hover:text-foreground transition">Asset</a>
-          <a href="#metodo" className="hover:text-foreground transition">Metodo</a>
-          <a href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza" className="hover:text-foreground transition">Prenota una consulenza</a>
+        <nav className="hidden md:flex items-center gap-2 text-[13px]">
+          <a href="#tesi" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Tesi</a>
+          <a href="#modello" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Modello</a>
+          <a href="#asset" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Asset</a>
+          <a href="#metodo" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Metodo</a>
+          <a href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza" className="ml-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cta-primary text-cta-primary-text hover:bg-cta-primary-hover transition-colors font-medium">Prenota una consulenza <span aria-hidden>→</span></a>
         </nav>
       </div>
     </header>
