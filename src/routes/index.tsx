@@ -111,6 +111,12 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-14 md:pt-20 pb-20 md:pb-28 relative">
+        <div className="mb-6 flex items-center gap-3 text-asahi-deep">
+          <span className="inline-block h-px w-8 bg-asahi-deep/60" />
+          <span className="font-serif italic text-[15px] md:text-[17px] tracking-[-0.005em]">
+            Humanizing Artificial Intelligence
+          </span>
+        </div>
         <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
           dove <span className="italic">tu</span> crei <span className="relative inline-block">
