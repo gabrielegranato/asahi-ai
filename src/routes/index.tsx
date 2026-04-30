@@ -379,8 +379,8 @@ function Method() {
           04 — Metodo
         </div>
         <h2 className="font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[1000px] text-balance">
-          Dal <span className="italic">terreno</span> al prodotto,
-          in quattro passi <span className="text-asahi">misurabili</span>.
+          Dall’<span className="italic">idea</span> al prodotto
+          in quattro fasi <span className="text-asahi">misurabili</span>.
         </h2>
 
         <ol className="mt-16 grid md:grid-cols-4 gap-px bg-background/15 border border-background/15">
