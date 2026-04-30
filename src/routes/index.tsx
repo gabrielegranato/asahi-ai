@@ -44,8 +44,8 @@ function Nav() {
         <a href="#top" className="flex items-center gap-3 group">
           <SunMark className="h-7 w-7" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
-          <span className="font-jp text-[11px] text-ink-soft hidden sm:inline tracking-[0.4em] pl-2 border-l hairline ml-1">
-            朝日
+          <span className="hidden sm:inline text-[10px] uppercase tracking-[0.32em] text-ink-soft pl-3 ml-1 border-l hairline">
+            Sunrise clarity
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[13px] text-ink-soft">
@@ -68,8 +68,42 @@ function Nav() {
 
 function SunMark({ className = "" }: { className?: string }) {
   return (
-    <span className={`relative inline-block ${className}`}>
-      <span className="absolute inset-0 rounded-full sun-disc sun-pulse" />
+    <span
+      className={`relative inline-block ${className}`}
+      aria-label="Asahi sun mark"
+      role="img"
+    >
+      <svg viewBox="0 0 64 64" className="absolute inset-0 w-full h-full" aria-hidden="true">
+        <defs>
+          <radialGradient id="asahiSun" cx="42%" cy="38%" r="62%">
+            <stop offset="0%" stopColor="oklch(0.96 0.05 80)" />
+            <stop offset="35%" stopColor="oklch(0.86 0.13 85)" />
+            <stop offset="72%" stopColor="oklch(0.74 0.16 55)" />
+            <stop offset="100%" stopColor="oklch(0.6 0.17 40)" />
+          </radialGradient>
+          <radialGradient id="asahiHalo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="oklch(0.92 0.08 75 / 0.55)" />
+            <stop offset="60%" stopColor="oklch(0.86 0.13 85 / 0.15)" />
+            <stop offset="100%" stopColor="transparent" />
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#asahiHalo)" />
+        <circle cx="32" cy="32" r="18" fill="url(#asahiSun)" />
+        <circle
+          cx="32"
+          cy="32"
+          r="18"
+          fill="none"
+          stroke="oklch(0.6 0.17 40 / 0.35)"
+          strokeWidth="0.6"
+        />
+        <circle
+          cx="26"
+          cy="26"
+          r="4"
+          fill="oklch(0.96 0.05 80 / 0.55)"
+        />
+      </svg>
     </span>
   );
 }
@@ -78,15 +112,16 @@ function SunMark({ className = "" }: { className?: string }) {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden grain">
-      {/* Sun composition */}
-      <div className="pointer-events-none absolute -right-40 -top-40 md:-right-24 md:-top-24 w-[680px] h-[680px] opacity-90">
-        <div className="absolute inset-0 sun-rays opacity-30" />
-        <div className="absolute inset-[18%] rounded-full sun-disc sun-pulse" />
+      {/* Sun composition — sunrise glow */}
+      <div className="pointer-events-none absolute -right-40 -top-40 md:-right-24 md:-top-24 w-[680px] h-[680px] opacity-95">
+        <div className="absolute inset-0 sun-halo" />
+        <div className="absolute inset-[22%] rounded-full sun-disc sun-pulse" />
       </div>
 
-      {/* Vertical JP label */}
-      <div className="hidden lg:flex absolute left-6 top-32 vertical-jp text-[10px] text-ink-soft">
-        AI 採用 を 価値 へ
+      {/* Sunrise tagline */}
+      <div className="hidden lg:flex absolute left-6 top-32 flex-col items-start gap-3 text-[10px] uppercase tracking-[0.4em] text-ink-soft">
+        <span className="inline-block h-10 w-px bg-foreground/40" />
+        Sunrise · Clarity · Value
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-20 md:pt-28 pb-24 md:pb-36 relative">
@@ -221,7 +256,7 @@ function FourBlocks() {
   const blocks = [
     {
       n: "01",
-      jp: "教育",
+      kicker: "Activate",
       title: "Formazione Adoption",
       body:
         "Attiviamo i decision maker e generiamo domanda qualificata. Linguaggio comune, criteri di scelta, casi reali.",
@@ -229,7 +264,7 @@ function FourBlocks() {
     },
     {
       n: "02",
-      jp: "戦略",
+      kicker: "Align",
       title: "Consulenza",
       body:
         "Trasformiamo processi, governance, ruoli, KPI e adozione. Dal cantiere al modello operativo che regge nel tempo.",
@@ -237,7 +272,7 @@ function FourBlocks() {
     },
     {
       n: "03",
-      jp: "工房",
+      kicker: "Build",
       title: "Software Factory",
       body:
         "Costruiamo prodotti e moduli AI a partire dai pattern ricorrenti emersi sul campo. Soluzioni scalabili, non one-off.",
@@ -245,7 +280,7 @@ function FourBlocks() {
     },
     {
       n: "04",
-      jp: "熟達",
+      kicker: "Master",
       title: "Formazione Avanzata",
       body:
         "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
@@ -272,8 +307,9 @@ function FourBlocks() {
                 <span className="number-marker text-[44px] text-asahi leading-none">
                   {b.n}
                 </span>
-                <span className="font-jp text-[20px] text-ink-soft tracking-[0.2em]">
-                  {b.jp}
+                <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft inline-flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-asahi" />
+                  {b.kicker}
                 </span>
               </div>
               <h3 className="font-serif text-[28px] md:text-[34px] tracking-[-0.01em] leading-tight">
@@ -459,8 +495,8 @@ function Footer() {
           <div className="flex items-center gap-3">
             <SunMark className="h-6 w-6" />
             <span className="font-serif text-[20px]">Asahi</span>
-            <span className="font-jp text-[11px] text-ink-soft tracking-[0.4em] pl-2 border-l hairline">
-              朝日
+            <span className="text-[10px] uppercase tracking-[0.4em] text-ink-soft pl-3 border-l hairline">
+              Sunrise clarity
             </span>
           </div>
           <p className="mt-5 text-[14px] text-ink-soft max-w-[420px] text-pretty">
