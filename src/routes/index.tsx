@@ -25,7 +25,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans antialiased">
       <Nav />
       <Hero />
-      <Marquee />
+      
       <Thesis />
       <FourBlocks />
       <Assets />
