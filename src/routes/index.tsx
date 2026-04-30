@@ -53,7 +53,7 @@ function Nav() {
         </nav>
         <a
           href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-asahi-deep text-background hover:brightness-110 transition"
+          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors rounded-sm"
         >
           Conversazione strategica
           <span aria-hidden>→</span>
@@ -134,14 +134,14 @@ function Hero() {
           <div className="md:col-span-5 flex flex-col gap-3">
             <a
               href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-              className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-asahi-deep text-background hover:brightness-110 transition"
+              className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-primary text-cta-primary-text hover:bg-cta-primary-hover transition-colors rounded-sm"
             >
               <span className="text-[15px] font-medium">Prenota una conversazione strategica</span>
               <span className="text-xl transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="#modello"
-              className="inline-flex items-center justify-between gap-6 px-6 py-5 border hairline hover:bg-paper-2 transition-colors"
+              className="inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-soft border border-cta-border text-cta-primary-text hover:bg-cta-soft-hover transition-colors rounded-sm"
             >
               <span className="text-[15px]">Scopri il modello in 4 blocchi</span>
               <span className="text-xl">↓</span>

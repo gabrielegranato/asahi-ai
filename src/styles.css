@@ -70,6 +70,13 @@
   --color-asahi-gold: var(--asahi-gold);
   --color-asahi-glow: var(--asahi-glow);
   --color-ink-warm: var(--ink-warm);
+  --color-cta-primary: var(--cta-primary);
+  --color-cta-primary-hover: var(--cta-primary-hover);
+  --color-cta-primary-text: var(--cta-primary-text);
+  --color-cta-soft: var(--cta-soft);
+  --color-cta-soft-hover: var(--cta-soft-hover);
+  --color-cta-border: var(--cta-border);
+  --color-cta-text: var(--cta-text);
   --font-serif: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter Tight", system-ui, sans-serif;
 }
@@ -90,6 +97,14 @@
   --asahi-deep: oklch(0.58 0.18 38);            /* terracotta — primary action */
   --asahi-gold: oklch(0.86 0.13 85);            /* soft gold */
   --asahi-glow: oklch(0.92 0.08 75);            /* inner light */
+  /* CTA system — warm, welcoming, premium */
+  --cta-primary: oklch(0.78 0.13 60);           /* #F2A15A soft warm orange */
+  --cta-primary-hover: oklch(0.72 0.15 55);     /* #E98C3D */
+  --cta-primary-text: oklch(0.22 0.04 45);      /* #2A1B12 dark warm */
+  --cta-soft: oklch(0.97 0.02 85);              /* #FFF8EC ivory cream */
+  --cta-soft-hover: oklch(0.91 0.06 75);        /* #F6D3AF warm peach */
+  --cta-border: oklch(0.82 0.05 75);            /* #D9B98F sand */
+  --cta-text: oklch(0.35 0.06 45);              /* #5A3927 warm brown */
   --card: var(--paper);
   --card-foreground: var(--ink);
   --popover: var(--paper);
