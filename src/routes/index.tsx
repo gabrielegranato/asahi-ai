@@ -142,6 +142,93 @@ function Hero() {
   );
 }
 
+/* Typewriter that cycles between the headline and the brand payoff */
+type Phrase = { parts: Array<{ text: string; className?: string; underline?: boolean }> };
+
+const PHRASES: Phrase[] = [
+  {
+    parts: [
+      { text: "Portiamo l’AI dove " },
+      { text: "tu", className: "italic" },
+      { text: " crei " },
+      { text: "valore", underline: true },
+      { text: "." },
+    ],
+  },
+  {
+    parts: [
+      { text: "Humanizing " },
+      { text: "Artificial Intelligence", className: "italic" },
+      { text: "." },
+    ],
+  },
+];
+
+function TypewriterHeadline() {
+  const [phraseIdx, setPhraseIdx] = useState(0);
+  const [charCount, setCharCount] = useState(0);
+  const [phase, setPhase] = useState<"typing" | "holding" | "deleting">("typing");
+
+  const phrase = PHRASES[phraseIdx];
+  const fullText = phrase.parts.map((p) => p.text).join("");
+
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    if (phase === "typing") {
+      if (charCount < fullText.length) {
+        timeout = setTimeout(() => setCharCount((c) => c + 1), 55);
+      } else {
+        timeout = setTimeout(() => setPhase("holding"), 2200);
+      }
+    } else if (phase === "holding") {
+      timeout = setTimeout(() => setPhase("deleting"), 800);
+    } else {
+      if (charCount > 0) {
+        timeout = setTimeout(() => setCharCount((c) => c - 1), 25);
+      } else {
+        setPhraseIdx((i) => (i + 1) % PHRASES.length);
+        setPhase("typing");
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [phase, charCount, fullText.length]);
+
+  // Render only the first `charCount` characters across parts, preserving formatting
+  let remaining = charCount;
+  const rendered: React.ReactNode[] = [];
+  phrase.parts.forEach((part, i) => {
+    if (remaining <= 0) return;
+    const slice = part.text.slice(0, remaining);
+    remaining -= slice.length;
+    if (part.underline) {
+      rendered.push(
+        <span key={i} className="relative inline-block">
+          {slice}
+          <span className="absolute left-0 right-0 -bottom-1 h-[6px] bg-asahi/80" />
+        </span>,
+      );
+    } else if (part.className) {
+      rendered.push(
+        <span key={i} className={part.className}>
+          {slice}
+        </span>,
+      );
+    } else {
+      rendered.push(<span key={i}>{slice}</span>);
+    }
+  });
+
+  return (
+    <>
+      {rendered}
+      <span
+        aria-hidden
+        className="inline-block w-[0.06em] h-[0.85em] align-[-0.1em] ml-1 bg-asahi-deep animate-pulse"
+      />
+    </>
+  );
+}
+
 
 /* ----------------------------- THESIS ----------------------------- */
 function Thesis() {
