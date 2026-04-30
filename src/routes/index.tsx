@@ -179,7 +179,7 @@ function Thesis() {
             Il nostro principio
           </div>
           <blockquote className="font-serif italic text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.01em]">
-            “Monetizziamo <span className="text-asahi">autonomia</span>,
+            “Creiamo <span className="text-asahi">autonomia</span>,
             non dipendenza.”
           </blockquote>
           <div className="mt-8 grid grid-cols-3 gap-4 text-[12px] text-ink-soft">
