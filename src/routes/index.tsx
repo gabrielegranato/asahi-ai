@@ -362,7 +362,7 @@ function Method() {
     { k: "Factory", v: "Scaliamo i pattern in prodotti e moduli." },
   ];
   return (
-    <section id="metodo" className="bg-foreground text-background relative overflow-hidden">
+    <section id="metodo" className="bg-ink-warm text-background relative overflow-hidden">
       <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-30 sun-disc rounded-full" />
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36 relative">
         <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-background/60 mb-10">
