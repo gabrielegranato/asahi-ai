@@ -192,7 +192,7 @@ function Hero() {
 /* ----------------------------- THESIS ----------------------------- */
 function Thesis() {
   return (
-    <section id="tesi" className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-40">
+    <section id="tesi" className="mx-auto max-w-[1320px] px-6 md:px-10 py-16 md:py-28 lg:py-36">
       <SectionLabel n="01" label="Tesi" />
       <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-10">
         <div className="md:col-span-7">
@@ -267,7 +267,7 @@ function FourBlocks() {
 
   return (
     <section id="modello" className="bg-paper-2 border-y hairline">
-      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36">
+      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-16 md:py-24 lg:py-32">
         <SectionLabel n="02" label="Modello in 4 blocchi" />
         <h2 className="mt-8 font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[900px] text-balance">
           Quattro fasi, <span className="italic">un solo</span> obiettivo: rendere i team autonomi nell’uso dell’AI.
@@ -310,7 +310,7 @@ function Percorso() {
   return (
     <section id="percorso" className="bg-ink-warm relative overflow-hidden">
       <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-25 sun-disc rounded-full pointer-events-none" />
-      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36 relative">
+      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-16 md:py-24 lg:py-32 relative">
         <SectionLabel n="03" label="Come lavoriamo con te" />
         <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
           <h2 className="md:col-span-7 font-serif text-[40px] md:text-[60px] leading-[1.04] tracking-[-0.02em] text-balance">
@@ -378,7 +378,7 @@ function Assets() {
   ];
 
   return (
-    <section id="asset" className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-40">
+    <section id="asset" className="mx-auto max-w-[1320px] px-6 md:px-10 py-16 md:py-28 lg:py-36">
       <SectionLabel n="04" label="Asset proprietari" />
       <div className="mt-8 grid md:grid-cols-12 gap-10">
         <h2 className="md:col-span-7 font-serif text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] text-balance">
