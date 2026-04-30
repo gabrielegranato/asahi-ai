@@ -45,7 +45,6 @@ function Nav() {
         <a href="#top" className="flex items-baseline gap-3 group">
           <SunMark className="h-7 w-7 self-center" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
-          <span className="hidden sm:inline font-serif italic text-[13px] text-ink-soft leading-none">— Humanizing Artificial Intelligence</span>
         </a>
         <nav className="hidden md:flex items-center gap-2 text-[13px]">
           <a href="#tesi" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Tesi</a>
