@@ -473,7 +473,7 @@ function Footer() {
             <li>Formazione Adoption</li>
             <li>Consulenza</li>
             <li>Software Factory</li>
-            <li>Formazione Avanzata</li>
+            <li>Asahi Academy</li>
           </ul>
         </div>
 
