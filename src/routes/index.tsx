@@ -212,22 +212,22 @@ function Thesis() {
           <blockquote className="font-serif italic text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.01em]">
             “Creiamo <span className="text-asahi">autonomia</span>, non dipendenza.”
           </blockquote>
-          <div className="mt-8 grid grid-cols-3 gap-4 text-[12px] text-ink-soft">
-            <Stat k="Processi" v="al centro" />
-            <Stat k="Governance" v="esplicita" />
-            <Stat k="KPI" v="misurabili" />
-          </div>
+          <dl className="mt-10 flex flex-col">
+            <Principle k="Processi" v="al centro" />
+            <Principle k="Governance" v="esplicita" />
+            <Principle k="KPI" v="misurabili" />
+          </dl>
         </aside>
       </div>
     </section>
   );
 }
 
-function Stat({ k, v }: { k: string; v: string }) {
+function Principle({ k, v }: { k: string; v: string }) {
   return (
-    <div className="border-t hairline pt-3">
-      <div className="text-[10px] uppercase tracking-[0.28em]">{k}</div>
-      <div className="font-serif text-[18px] text-foreground mt-1">{v}</div>
+    <div className="flex items-baseline justify-between gap-6 border-t hairline py-4">
+      <dt className="text-[10px] uppercase tracking-[0.28em] text-ink-soft">{k}</dt>
+      <dd className="font-serif text-[18px] md:text-[20px] text-foreground text-right">{v}</dd>
     </div>
   );
 }
