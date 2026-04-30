@@ -69,6 +69,7 @@
   --color-asahi-deep: var(--asahi-deep);
   --color-asahi-gold: var(--asahi-gold);
   --color-asahi-glow: var(--asahi-glow);
+  --color-ink-warm: var(--ink-warm);
   --font-serif: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter Tight", system-ui, sans-serif;
   --font-jp: "Noto Serif JP", serif;
