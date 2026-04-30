@@ -166,10 +166,8 @@ function Hero() {
         </h1>
 
         <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
-          <p className="md:col-span-7 font-serif text-[22px] md:text-[28px] leading-[1.4] tracking-[-0.01em] text-ink-soft text-pretty max-w-[720px]">
-            Partiamo dai tuoi <span className="text-foreground italic">processi</span> per costruire soluzioni AI{" "}
-            <span className="text-foreground">utili, adottabili e misurabili</span>.<br className="hidden md:block" />
-            <span className="text-[17px] md:text-[19px] not-italic">Non vendiamo dipendenza: trasferiamo capacità, governance e risultati.</span>
+          <p className="md:col-span-7 text-[19px] md:text-[24px] leading-[1.6] tracking-[-0.01em] text-ink-soft text-pretty max-w-[700px]">
+            Partiamo dai tuoi processi per costruire soluzioni AI utili, adottabili e misurabili. Trasferiamo capacità, governance e risultati: l’obiettivo è creare autonomia, non dipendenza.
           </p>
 
           <div className="md:col-span-5 flex flex-col gap-3">
