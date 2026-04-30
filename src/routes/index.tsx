@@ -50,14 +50,8 @@ function Nav() {
           <a href="#modello" className="hover:text-foreground transition">Modello</a>
           <a href="#asset" className="hover:text-foreground transition">Asset</a>
           <a href="#metodo" className="hover:text-foreground transition">Metodo</a>
+          <a href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza" className="hover:text-foreground transition">Prenota una consulenza</a>
         </nav>
-        <a
-          href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors rounded-sm"
-        >
-          Conversazione strategica
-          <span aria-hidden>→</span>
-        </a>
       </div>
     </header>
   );
