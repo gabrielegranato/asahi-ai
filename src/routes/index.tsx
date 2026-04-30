@@ -55,7 +55,7 @@ function Nav() {
           <a href="#metodo" className="hover:text-foreground transition">Metodo</a>
         </nav>
         <a
-          href="#contatto"
+          href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
           className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background hover:bg-asahi-deep transition-colors"
         >
           Conversazione strategica
