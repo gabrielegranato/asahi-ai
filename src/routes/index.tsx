@@ -4,13 +4,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Asahi — Portiamo l'AI dove crei valore" },
+      { title: "Asahi — Portiamo l'AI dove tu crei valore" },
       {
         name: "description",
         content:
           "Asahi è AI Adoption-as-a-Service: partiamo dai tuoi processi per costruire soluzioni AI utili, adottabili e misurabili. Formazione, consulenza, software factory.",
       },
-      { property: "og:title", content: "Asahi — Portiamo l'AI dove crei valore" },
+      { property: "og:title", content: "Asahi — Portiamo l'AI dove tu crei valore" },
       {
         property: "og:description",
         content:
@@ -25,7 +25,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground font-sans antialiased">
       <Nav />
       <Hero />
-      <Marquee />
+      
       <Thesis />
       <FourBlocks />
       <Assets />
@@ -125,14 +125,9 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-20 md:pt-28 pb-24 md:pb-36 relative">
-        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-ink-soft mb-10">
-          <span className="inline-block h-px w-8 ink-rule" />
-          AI Adoption-as-a-Service · Italia
-        </div>
-
         <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[88px] lg:text-[108px] leading-[0.95] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
-          <span className="italic">dove</span> crei <span className="relative inline-block">
+          <span className="italic">dove</span> <span className="italic">tu</span> crei <span className="relative inline-block">
             valore
             <span className="absolute left-0 right-0 -bottom-1 h-[6px] bg-asahi/80" />
           </span>.
@@ -163,45 +158,10 @@ function Hero() {
           </div>
         </div>
       </div>
-
-      {/* footer rule with meta */}
-      <div className="border-t hairline">
-        <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-4 flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[0.28em] text-ink-soft">
-          <span>Per CEO · CIO · CMO</span>
-          <span className="hidden md:inline">Processi → Governance → Persone → KPI</span>
-          <span>v. 2026</span>
-        </div>
-      </div>
     </section>
   );
 }
 
-/* ----------------------------- MARQUEE ----------------------------- */
-function Marquee() {
-  const items = [
-    "Adozione misurabile",
-    "Governance dell’AI",
-    "Processi reali",
-    "Asahi AI Score",
-    "Asahi AI Builder",
-    "Asahi AI Canvas",
-    "Software Factory",
-    "Autonomia, non dipendenza",
-  ];
-  const row = [...items, ...items];
-  return (
-    <div className="border-y hairline bg-paper-2 overflow-hidden">
-      <div className="marquee-track flex gap-12 py-5 text-[13px] uppercase tracking-[0.28em] text-ink-soft">
-        {row.map((t, i) => (
-          <span key={i} className="flex items-center gap-12">
-            {t}
-            <span className="h-1 w-1 rounded-full bg-asahi" />
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 /* ----------------------------- THESIS ----------------------------- */
 function Thesis() {
@@ -281,7 +241,7 @@ function FourBlocks() {
     {
       n: "04",
       kicker: "Master",
-      title: "Formazione Avanzata",
+      title: "Asahi Academy",
       body:
         "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
       tag: "Team & AI Mentors",
@@ -366,8 +326,8 @@ function Assets() {
       <SectionLabel n="03" label="Asset proprietari" />
       <div className="mt-8 grid md:grid-cols-12 gap-10">
         <h2 className="md:col-span-6 font-serif text-[40px] md:text-[60px] leading-[1.02] tracking-[-0.02em] text-balance">
-          Strumenti nostri,<br />
-          <span className="italic">disegnati</span> per <br />l’adozione reale.
+          La nostra <span className="italic">tecnologia</span><br />
+          al servizio dei<br />tuoi <span className="italic">processi</span>.
         </h2>
         <p className="md:col-span-6 md:pt-6 text-[18px] text-ink-soft max-w-[520px] text-pretty">
           Non un metodo astratto: quattro asset proprietari che entrano nel tuo
@@ -419,8 +379,8 @@ function Method() {
           04 — Metodo
         </div>
         <h2 className="font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[1000px] text-balance">
-          Dal <span className="italic">terreno</span> al prodotto,
-          in quattro passi <span className="text-asahi">misurabili</span>.
+          Dall’<span className="italic">idea</span> al prodotto
+          in quattro fasi <span className="text-asahi">misurabili</span>.
         </h2>
 
         <ol className="mt-16 grid md:grid-cols-4 gap-px bg-background/15 border border-background/15">
@@ -513,7 +473,7 @@ function Footer() {
             <li>Formazione Adoption</li>
             <li>Consulenza</li>
             <li>Software Factory</li>
-            <li>Formazione Avanzata</li>
+            <li>Asahi Academy</li>
           </ul>
         </div>
 
