@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&family=Noto+Serif+JP:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@300;400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -72,7 +72,6 @@
   --color-ink-warm: var(--ink-warm);
   --font-serif: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter Tight", system-ui, sans-serif;
-  --font-jp: "Noto Serif JP", serif;
 }
 
 :root {
@@ -183,19 +182,11 @@
 
 @layer utilities {
   .font-serif { font-family: var(--font-serif); }
-  .font-jp { font-family: var(--font-jp); }
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
 
   .hairline { border-color: var(--rule); }
   .ink-rule { background: var(--ink); }
-
-  /* Vertical JP label */
-  .vertical-jp {
-    writing-mode: vertical-rl;
-    font-family: var(--font-jp);
-    letter-spacing: 0.4em;
-  }
 
   /* Warm sunrise sun — soft gradient with inner glow */
   .sun-disc {
