@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -60,9 +59,20 @@ function Nav() {
         </a>
         <nav className="hidden md:flex items-center gap-2 text-[13px]">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">{l.label}</a>
+            <a
+              key={l.href}
+              href={l.href}
+              className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors"
+            >
+              {l.label}
+            </a>
           ))}
-          <a href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza" className="ml-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cta-primary text-cta-primary-text hover:bg-cta-primary-hover transition-colors font-medium">Prenota una consulenza <span aria-hidden>→</span></a>
+          <a
+            href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza"
+            className="ml-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cta-primary text-cta-primary-text hover:bg-cta-primary-hover transition-colors font-medium"
+          >
+            Prenota una consulenza <span aria-hidden>→</span>
+          </a>
         </nav>
         <button
           type="button"
@@ -103,11 +113,7 @@ function Nav() {
 
 function SunMark({ className = "" }: { className?: string }) {
   return (
-    <span
-      className={`relative inline-block ${className}`}
-      aria-label="Asahi sun mark"
-      role="img"
-    >
+    <span className={`relative inline-block ${className}`} aria-label="Asahi sun mark" role="img">
       <svg viewBox="0 0 64 64" className="absolute inset-0 w-full h-full" aria-hidden="true">
         <defs>
           <radialGradient id="asahiSun" cx="42%" cy="38%" r="62%">
@@ -124,20 +130,8 @@ function SunMark({ className = "" }: { className?: string }) {
         </defs>
         <circle cx="32" cy="32" r="30" fill="url(#asahiHalo)" />
         <circle cx="32" cy="32" r="18" fill="url(#asahiSun)" />
-        <circle
-          cx="32"
-          cy="32"
-          r="18"
-          fill="none"
-          stroke="oklch(0.6 0.17 40 / 0.35)"
-          strokeWidth="0.6"
-        />
-        <circle
-          cx="26"
-          cy="26"
-          r="4"
-          fill="oklch(0.96 0.05 80 / 0.55)"
-        />
+        <circle cx="32" cy="32" r="18" fill="none" stroke="oklch(0.6 0.17 40 / 0.35)" strokeWidth="0.6" />
+        <circle cx="26" cy="26" r="4" fill="oklch(0.96 0.05 80 / 0.55)" />
       </svg>
     </span>
   );
@@ -161,15 +155,18 @@ function Hero() {
 
         <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
-          dove <span className="italic">tu</span> crei <span className="relative inline-block">
+          dove <span className="italic">tu</span> crei{" "}
+          <span className="relative inline-block">
             valore
             <span className="absolute left-0 right-0 -bottom-1 h-[6px] bg-asahi/80" />
-          </span>.
+          </span>
+          .
         </h1>
 
         <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
           <p className="md:col-span-6 text-[16px] md:text-[19px] leading-[1.75] tracking-[-0.003em] text-ink-soft text-pretty max-w-[46ch]">
-            Asahi aiuta le aziende a integrare l’AI nei processi aziendali, con governance chiara, KPI misurabili, AI Mentors interni e soluzioni proprietarie costruite sui problemi reali.
+            Asahi aiuta le aziende a integrare l’AI nei processi aziendali, con governance chiara, KPI misurabili, AI
+            Mentors interni e soluzioni proprietarie costruite sui problemi reali.
           </p>
 
           <div className="md:col-span-5 md:col-start-8 flex flex-col gap-3">
@@ -200,25 +197,20 @@ function Thesis() {
       <div className="grid md:grid-cols-12 gap-10 md:gap-16 mt-10">
         <div className="md:col-span-7">
           <p className="font-serif text-[34px] sm:text-[44px] md:text-[56px] leading-[1.08] tracking-[-0.015em] text-balance">
-            Asahi parte dai <em className="text-asahi not-italic">processi</em> per
-            rendere l’AI <span className="italic">adottabile</span>,
-            <span className="italic"> governabile</span> e
+            Asahi parte dai <em className="text-asahi not-italic">processi</em> per rendere l’AI{" "}
+            <span className="italic">utile</span>,<span className="italic"> efficace</span> e
             <span className="italic"> misurabile</span>.
           </p>
           <p className="mt-10 text-[18px] text-ink-soft max-w-[620px] text-pretty">
-            La maggior parte dei progetti AI fallisce non per la tecnologia, ma per
-            adozione mancata, governance assente e KPI scollegati dal business.
-            Noi attacchiamo proprio lì.
+            La maggior parte dei progetti AI fallisce non per la tecnologia, ma per adozione mancata, governance assente
+            e KPI scollegati dal business. Noi attacchiamo proprio lì.
           </p>
         </div>
 
         <aside className="md:col-span-5 md:pl-10 md:border-l hairline">
-          <div className="text-[11px] uppercase tracking-[0.32em] text-ink-soft mb-4">
-            Il nostro principio
-          </div>
+          <div className="text-[11px] uppercase tracking-[0.32em] text-ink-soft mb-4">Il nostro principio</div>
           <blockquote className="font-serif italic text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.01em]">
-            “Creiamo <span className="text-asahi">autonomia</span>,
-            non dipendenza.”
+            “Creiamo <span className="text-asahi">autonomia</span>, non dipendenza.”
           </blockquote>
           <div className="mt-8 grid grid-cols-3 gap-4 text-[12px] text-ink-soft">
             <Stat k="Processi" v="al centro" />
@@ -247,32 +239,28 @@ function FourBlocks() {
       n: "01",
       kicker: "Activate",
       title: "Formazione Adoption",
-      body:
-        "Attiviamo i decision maker e generiamo domanda qualificata. Linguaggio comune, criteri di scelta, casi reali.",
+      body: "Attiviamo i decision maker e generiamo domanda qualificata. Linguaggio comune, criteri di scelta, casi reali.",
       tag: "Decision makers",
     },
     {
       n: "02",
       kicker: "Align",
       title: "Consulenza",
-      body:
-        "Trasformiamo processi, governance, ruoli, KPI e adozione. Dal cantiere al modello operativo che regge nel tempo.",
+      body: "Trasformiamo processi, governance, ruoli, KPI e adozione. Dal cantiere al modello operativo che regge nel tempo.",
       tag: "Processi & Governance",
     },
     {
       n: "03",
       kicker: "Build",
       title: "Software Factory",
-      body:
-        "Costruiamo prodotti e moduli AI a partire dai pattern ricorrenti emersi sul campo. Soluzioni scalabili, non one-off.",
+      body: "Costruiamo prodotti e moduli AI a partire dai pattern ricorrenti emersi sul campo. Soluzioni scalabili, non one-off.",
       tag: "Prodotti & Moduli",
     },
     {
       n: "04",
       kicker: "Master",
       title: "Formazione Avanzata",
-      body:
-        "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
+      body: "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
       tag: "Team & AI Mentors",
     },
   ];
@@ -282,36 +270,24 @@ function FourBlocks() {
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36">
         <SectionLabel n="02" label="Modello in 4 blocchi" />
         <h2 className="mt-8 font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[900px] text-balance">
-          Quattro fronti, <span className="italic">un solo</span> obiettivo:
-          adozione reale.
+          Quattro fronti, <span className="italic">un solo</span> obiettivo: adozione reale.
         </h2>
 
         <div className="mt-16 grid md:grid-cols-2 gap-px bg-rule border hairline">
           {blocks.map((b) => (
-            <article
-              key={b.n}
-              className="bg-background p-8 md:p-12 group hover:bg-paper transition-colors relative"
-            >
+            <article key={b.n} className="bg-background p-8 md:p-12 group hover:bg-paper transition-colors relative">
               <div className="flex items-start justify-between mb-8">
-                <span className="number-marker text-[44px] text-asahi leading-none">
-                  {b.n}
-                </span>
+                <span className="number-marker text-[44px] text-asahi leading-none">{b.n}</span>
                 <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft inline-flex items-center gap-2">
                   <span className="h-1.5 w-1.5 rounded-full bg-asahi" />
                   {b.kicker}
                 </span>
               </div>
-              <h3 className="font-serif text-[28px] md:text-[34px] tracking-[-0.01em] leading-tight">
-                {b.title}
-              </h3>
-              <p className="mt-4 text-[16px] text-ink-soft max-w-[460px] text-pretty">
-                {b.body}
-              </p>
+              <h3 className="font-serif text-[28px] md:text-[34px] tracking-[-0.01em] leading-tight">{b.title}</h3>
+              <p className="mt-4 text-[16px] text-ink-soft max-w-[460px] text-pretty">{b.body}</p>
               <div className="mt-10 pt-5 border-t hairline flex items-center justify-between text-[11px] uppercase tracking-[0.28em] text-ink-soft">
                 <span>{b.tag}</span>
-                <span className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity">
-                  →
-                </span>
+                <span className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity">→</span>
               </div>
             </article>
           ))}
@@ -338,11 +314,12 @@ function Percorso() {
         <SectionLabel n="03" label="Come lavoriamo con te" />
         <div className="mt-8 grid md:grid-cols-12 gap-8 md:gap-12">
           <h2 className="md:col-span-7 font-serif text-[40px] md:text-[60px] leading-[1.04] tracking-[-0.02em] text-balance">
-            Il <span className="italic">Percorso</span> Asahi, dalla
-            consapevolezza all’<span className="text-asahi-deep">autonomia</span>.
+            Il <span className="italic">Percorso</span> Asahi, dalla consapevolezza all’
+            <span className="text-asahi-deep">autonomia</span>.
           </h2>
           <p className="md:col-span-5 md:pt-4 text-[17px] md:text-[18px] text-ink-soft text-pretty max-w-[520px]">
-            Un percorso in cinque fasi per trasformare l’interesse verso l’AI in adozione reale, governata e misurabile nei processi aziendali.
+            Un percorso in cinque fasi per trasformare l’interesse verso l’AI in adozione reale, governata e misurabile
+            nei processi aziendali.
           </p>
         </div>
 
@@ -381,26 +358,22 @@ function Assets() {
     {
       name: "Asahi AI Score",
       role: "Qualifica il contesto",
-      body:
-        "Radar rapido di pre-diagnosi. Misura la distanza organizzativa dall’autonomia operativa e apre la domanda verso le fasi successive.",
+      body: "Radar rapido di pre-diagnosi. Misura la distanza organizzativa dall’autonomia operativa e apre la domanda verso le fasi successive.",
     },
     {
       name: "Asahi AI Builder",
       role: "Valuta i casi d’uso",
-      body:
-        "Dallo Stadio 1 in poi valuta readiness, rischio, priorità e decisioni operative. Non è un quiz di lead generation.",
+      body: "Dallo Stadio 1 in poi valuta readiness, rischio, priorità e decisioni operative. Non è un quiz di lead generation.",
     },
     {
       name: "Asahi AI Canvas",
       role: "Governa l’esecuzione",
-      body:
-        "Allinea ruoli, responsabilità, KPI, rischi e adozione nel tempo. Trasforma ogni progetto AI in standard operativo.",
+      body: "Allinea ruoli, responsabilità, KPI, rischi e adozione nel tempo. Trasforma ogni progetto AI in standard operativo.",
     },
     {
       name: "Software Factory",
       role: "Scala il prodotto",
-      body:
-        "Trasforma pattern ricorrenti in moduli, dashboard, prodotti verticali e soluzioni proprietarie costruite su problemi reali.",
+      body: "Trasforma pattern ricorrenti in moduli, dashboard, prodotti verticali e soluzioni proprietarie costruite su problemi reali.",
     },
   ];
 
@@ -412,31 +385,23 @@ function Assets() {
           Gli asset che rendono il <span className="italic">metodo</span> replicabile.
         </h2>
         <p className="md:col-span-5 md:pt-6 text-[18px] text-ink-soft max-w-[520px] text-pretty">
-          Score, Builder, Canvas e Software Factory: ogni strumento presidia un momento diverso del percorso di adozione dell’AI.
+          Score, Builder, Canvas e Software Factory: ogni strumento presidia un momento diverso del percorso di adozione
+          dell’AI.
         </p>
       </div>
 
       <div className="mt-16 grid md:grid-cols-2 gap-px bg-rule border hairline">
         {assets.map((a, i) => (
-          <article
-            key={a.name}
-            className="bg-background p-8 md:p-12 group hover:bg-paper transition-colors"
-          >
+          <article key={a.name} className="bg-background p-8 md:p-12 group hover:bg-paper transition-colors">
             <div className="flex items-start justify-between mb-8">
-              <span className="number-marker text-[36px] text-asahi-deep leading-none">
-                0{i + 1}
-              </span>
+              <span className="number-marker text-[36px] text-asahi-deep leading-none">0{i + 1}</span>
               <span className="text-[10px] uppercase tracking-[0.32em] text-asahi inline-flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-asahi" />
                 {a.role}
               </span>
             </div>
-            <h3 className="font-serif text-[28px] md:text-[32px] tracking-[-0.01em] leading-tight">
-              {a.name}
-            </h3>
-            <p className="mt-4 text-[16px] text-ink-soft max-w-[460px] text-pretty">
-              {a.body}
-            </p>
+            <h3 className="font-serif text-[28px] md:text-[32px] tracking-[-0.01em] leading-tight">{a.name}</h3>
+            <p className="mt-4 text-[16px] text-ink-soft max-w-[460px] text-pretty">{a.body}</p>
           </article>
         ))}
       </div>
@@ -456,15 +421,13 @@ function Footer() {
             <span className="font-serif italic text-[14px] text-ink-soft">— Humanizing Artificial Intelligence</span>
           </div>
           <p className="mt-5 text-[14px] text-ink-soft max-w-[420px] text-pretty">
-            AI Adoption-as-a-Service. Portiamo l’AI dove crei valore — partendo
-            dai processi, con governance, persone e risultati misurabili.
+            AI Adoption-as-a-Service. Portiamo l’AI dove crei valore — partendo dai processi, con governance, persone e
+            risultati misurabili.
           </p>
         </div>
 
         <div className="md:col-span-3 text-[13px]">
-          <div className="text-[11px] uppercase tracking-[0.28em] text-ink-soft mb-3">
-            Modello
-          </div>
+          <div className="text-[11px] uppercase tracking-[0.28em] text-ink-soft mb-3">Modello</div>
           <ul className="space-y-2">
             <li>Formazione Adoption</li>
             <li>Consulenza</li>
@@ -474,9 +437,7 @@ function Footer() {
         </div>
 
         <div className="md:col-span-2 text-[13px]">
-          <div className="text-[11px] uppercase tracking-[0.28em] text-ink-soft mb-3">
-            Asset
-          </div>
+          <div className="text-[11px] uppercase tracking-[0.28em] text-ink-soft mb-3">Asset</div>
           <ul className="space-y-2">
             <li>AI Score</li>
             <li>AI Builder</li>
@@ -486,9 +447,7 @@ function Footer() {
         </div>
 
         <div className="md:col-span-2 text-[13px]">
-          <div className="text-[11px] uppercase tracking-[0.28em] text-ink-soft mb-3">
-            Contatto
-          </div>
+          <div className="text-[11px] uppercase tracking-[0.28em] text-ink-soft mb-3">Contatto</div>
           <a href="mailto:hello@asahi.it" className="hover:text-asahi transition-colors">
             hello@asahi.it
           </a>
