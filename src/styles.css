@@ -78,15 +78,16 @@
   --radius: 0.125rem;
   /* Asahi — editoriale minimale giapponese */
   --background: oklch(0.985 0.003 80);          /* warm paper white */
-  --foreground: oklch(0.16 0.01 60);            /* near-black ink */
-  --ink: oklch(0.16 0.01 60);
-  --ink-soft: oklch(0.32 0.012 60);
+  --foreground: oklch(0.22 0.03 50);            /* warm dark espresso, not pure black */
+  --ink: oklch(0.22 0.03 50);
+  --ink-soft: oklch(0.42 0.02 55);
+  --ink-warm: oklch(0.32 0.06 45);              /* warm brown for buttons / dark sections */
   --paper: oklch(0.985 0.003 80);
   --paper-2: oklch(0.96 0.005 80);
-  --rule: oklch(0.16 0.01 60 / 0.18);
-  /* Sunrise palette — warm amber/terracotta, no flag-red */
+  --rule: oklch(0.22 0.03 50 / 0.18);
+  /* Sunrise palette — warm amber/terracotta */
   --asahi: oklch(0.74 0.16 55);                 /* warm amber sun */
-  --asahi-deep: oklch(0.6 0.17 40);             /* terracotta */
+  --asahi-deep: oklch(0.58 0.18 38);            /* terracotta — primary action */
   --asahi-gold: oklch(0.86 0.13 85);            /* soft gold */
   --asahi-glow: oklch(0.92 0.08 75);            /* inner light */
   --card: var(--paper);
