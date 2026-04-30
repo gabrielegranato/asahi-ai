@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "AI Adoption-as-a-Service. Processi, governance, persone, asset proprietari. Monetizziamo autonomia, non dipendenza.",
+          "AI Adoption-as-a-Service. Processi, governance, persone, asset proprietari. Creiamo autonomia, non dipendenza.",
       },
     ],
   }),
