@@ -398,9 +398,10 @@ function Footer() {
     <footer className="border-t hairline bg-paper-2">
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-14 grid md:grid-cols-12 gap-10">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-3">
-            <SunMark className="h-6 w-6" />
+          <div className="flex items-baseline gap-3">
+            <SunMark className="h-6 w-6 self-center" />
             <span className="font-serif text-[20px]">Asahi</span>
+            <span className="font-serif italic text-[14px] text-ink-soft">— Humanizing Artificial Intelligence</span>
           </div>
           <p className="mt-5 text-[14px] text-ink-soft max-w-[420px] text-pretty">
             AI Adoption-as-a-Service. Portiamo l’AI dove crei valore — partendo
