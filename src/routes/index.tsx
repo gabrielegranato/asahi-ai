@@ -403,9 +403,6 @@ function Footer() {
           <div className="flex items-center gap-3">
             <SunMark className="h-6 w-6" />
             <span className="font-serif text-[20px]">Asahi</span>
-            <span className="text-[10px] uppercase tracking-[0.4em] text-ink-soft pl-3 border-l hairline">
-              Sunrise clarity
-            </span>
           </div>
           <p className="mt-5 text-[14px] text-ink-soft max-w-[420px] text-pretty">
             AI Adoption-as-a-Service. Portiamo l’AI dove crei valore — partendo
