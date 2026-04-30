@@ -447,7 +447,7 @@ function Footer() {
       <div className="border-t hairline">
         <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-5 flex flex-wrap items-center justify-between gap-3 text-[11px] uppercase tracking-[0.28em] text-ink-soft">
           <span>© {new Date().getFullYear()} Asahi · AI Adoption-as-a-Service</span>
-          <span>Monetizziamo autonomia, non dipendenza.</span>
+          <span>Creiamo autonomia, non dipendenza.</span>
         </div>
       </div>
     </footer>
