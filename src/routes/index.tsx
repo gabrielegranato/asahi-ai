@@ -128,10 +128,15 @@ function Hero() {
           <div className="md:col-span-5 flex flex-col gap-3">
             <a
               href="#modello"
-              className="inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-soft border border-cta-border text-cta-primary-text hover:bg-cta-soft-hover transition-colors rounded-sm"
+              className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-cta-soft border border-cta-border text-cta-primary-text hover:bg-cta-soft-hover transition-colors rounded-sm"
             >
-              <span className="text-[15px]">Scopri il Framework Asahi</span>
-              <span className="text-xl">↓</span>
+              <span className="flex flex-col gap-1">
+                <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft">Il metodo</span>
+                <span className="font-serif text-[20px] md:text-[22px] tracking-[-0.01em] leading-none">
+                  Esplora il <span className="italic">Framework</span> Asahi
+                </span>
+              </span>
+              <span className="text-xl transition-transform group-hover:translate-x-1">→</span>
             </a>
           </div>
         </div>
