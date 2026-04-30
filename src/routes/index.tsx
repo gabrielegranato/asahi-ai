@@ -414,7 +414,7 @@ function CTA() {
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-40 relative">
 
-        <div className="mt-12 flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
           <a
             href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
             className="inline-flex items-center gap-4 px-7 py-5 bg-foreground text-background hover:bg-asahi-deep transition-colors"
