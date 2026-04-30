@@ -112,15 +112,16 @@ function SunMark({ className = "" }: { className?: string }) {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden grain">
-      {/* Sun composition */}
-      <div className="pointer-events-none absolute -right-40 -top-40 md:-right-24 md:-top-24 w-[680px] h-[680px] opacity-90">
-        <div className="absolute inset-0 sun-rays opacity-30" />
-        <div className="absolute inset-[18%] rounded-full sun-disc sun-pulse" />
+      {/* Sun composition — sunrise glow */}
+      <div className="pointer-events-none absolute -right-40 -top-40 md:-right-24 md:-top-24 w-[680px] h-[680px] opacity-95">
+        <div className="absolute inset-0 sun-halo" />
+        <div className="absolute inset-[22%] rounded-full sun-disc sun-pulse" />
       </div>
 
-      {/* Vertical JP label */}
-      <div className="hidden lg:flex absolute left-6 top-32 vertical-jp text-[10px] text-ink-soft">
-        AI 採用 を 価値 へ
+      {/* Sunrise tagline */}
+      <div className="hidden lg:flex absolute left-6 top-32 flex-col items-start gap-3 text-[10px] uppercase tracking-[0.4em] text-ink-soft">
+        <span className="inline-block h-10 w-px bg-foreground/40" />
+        Sunrise · Clarity · Value
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-20 md:pt-28 pb-24 md:pb-36 relative">
