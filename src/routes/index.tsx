@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "AI Adoption-as-a-Service. Processi, governance, persone, asset proprietari. Monetizziamo autonomia, non dipendenza.",
+          "AI Adoption-as-a-Service. Processi, governance, persone, asset proprietari. Creiamo autonomia, non dipendenza.",
       },
     ],
   }),
@@ -44,9 +44,6 @@ function Nav() {
         <a href="#top" className="flex items-center gap-3 group">
           <SunMark className="h-7 w-7" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
-          <span className="hidden sm:inline text-[10px] uppercase tracking-[0.32em] text-ink-soft pl-3 ml-1 border-l hairline">
-            Sunrise clarity
-          </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[13px] text-ink-soft">
           <a href="#tesi" className="hover:text-foreground transition">Tesi</a>
@@ -56,7 +53,7 @@ function Nav() {
         </nav>
         <a
           href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background hover:bg-asahi-deep transition-colors"
+          className="text-[13px] inline-flex items-center gap-2 px-4 py-2 bg-asahi-deep text-background hover:brightness-110 transition"
         >
           Conversazione strategica
           <span aria-hidden>→</span>
@@ -112,20 +109,14 @@ function SunMark({ className = "" }: { className?: string }) {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden grain">
-      {/* Sun composition — sunrise glow */}
-      <div className="pointer-events-none absolute -right-40 -top-40 md:-right-24 md:-top-24 w-[680px] h-[680px] opacity-95">
+      {/* Sun composition — vertically centered with hero */}
+      <div className="pointer-events-none absolute right-[-12%] top-1/2 -translate-y-1/2 w-[520px] h-[520px] md:w-[620px] md:h-[620px] lg:w-[720px] lg:h-[720px] opacity-95">
         <div className="absolute inset-0 sun-halo" />
-        <div className="absolute inset-[22%] rounded-full sun-disc sun-pulse" />
+        <div className="absolute inset-[20%] rounded-full sun-disc sun-pulse" />
       </div>
 
-      {/* Sunrise tagline */}
-      <div className="hidden lg:flex absolute left-6 top-32 flex-col items-start gap-3 text-[10px] uppercase tracking-[0.4em] text-ink-soft">
-        <span className="inline-block h-10 w-px bg-foreground/40" />
-        Sunrise · Clarity · Value
-      </div>
-
-      <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-20 md:pt-28 pb-24 md:pb-36 relative">
-        <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[88px] lg:text-[108px] leading-[0.95] tracking-[-0.02em] text-balance max-w-[1100px]">
+      <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-14 md:pt-20 pb-20 md:pb-28 relative">
+        <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
           <span className="italic">dove</span> <span className="italic">tu</span> crei <span className="relative inline-block">
             valore
@@ -143,7 +134,7 @@ function Hero() {
           <div className="md:col-span-5 flex flex-col gap-3">
             <a
               href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-              className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-foreground text-background hover:bg-asahi-deep transition-colors"
+              className="group inline-flex items-center justify-between gap-6 px-6 py-5 bg-asahi-deep text-background hover:brightness-110 transition"
             >
               <span className="text-[15px] font-medium">Prenota una conversazione strategica</span>
               <span className="text-xl transition-transform group-hover:translate-x-1">→</span>
@@ -188,7 +179,7 @@ function Thesis() {
             Il nostro principio
           </div>
           <blockquote className="font-serif italic text-[28px] md:text-[34px] leading-[1.15] tracking-[-0.01em]">
-            “Monetizziamo <span className="text-asahi">autonomia</span>,
+            “Creiamo <span className="text-asahi">autonomia</span>,
             non dipendenza.”
           </blockquote>
           <div className="mt-8 grid grid-cols-3 gap-4 text-[12px] text-ink-soft">
@@ -371,7 +362,7 @@ function Method() {
     { k: "Factory", v: "Scaliamo i pattern in prodotti e moduli." },
   ];
   return (
-    <section id="metodo" className="bg-foreground text-background relative overflow-hidden">
+    <section id="metodo" className="bg-ink-warm text-background relative overflow-hidden">
       <div className="absolute -left-40 -bottom-40 w-[520px] h-[520px] opacity-30 sun-disc rounded-full" />
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36 relative">
         <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-background/60 mb-10">
@@ -385,7 +376,7 @@ function Method() {
 
         <ol className="mt-16 grid md:grid-cols-4 gap-px bg-background/15 border border-background/15">
           {steps.map((s, i) => (
-            <li key={s.k} className="bg-foreground p-8">
+            <li key={s.k} className="bg-ink-warm p-8">
               <div className="number-marker text-[36px] text-asahi leading-none">
                 0{i + 1}
               </div>
@@ -412,9 +403,6 @@ function Footer() {
           <div className="flex items-center gap-3">
             <SunMark className="h-6 w-6" />
             <span className="font-serif text-[20px]">Asahi</span>
-            <span className="text-[10px] uppercase tracking-[0.4em] text-ink-soft pl-3 border-l hairline">
-              Sunrise clarity
-            </span>
           </div>
           <p className="mt-5 text-[14px] text-ink-soft max-w-[420px] text-pretty">
             AI Adoption-as-a-Service. Portiamo l’AI dove crei valore — partendo
@@ -459,7 +447,7 @@ function Footer() {
       <div className="border-t hairline">
         <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-5 flex flex-wrap items-center justify-between gap-3 text-[11px] uppercase tracking-[0.28em] text-ink-soft">
           <span>© {new Date().getFullYear()} Asahi · AI Adoption-as-a-Service</span>
-          <span>Monetizziamo autonomia, non dipendenza.</span>
+          <span>Creiamo autonomia, non dipendenza.</span>
         </div>
       </div>
     </footer>
