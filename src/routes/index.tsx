@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 
 export const Route = createFileRoute("/")({
@@ -39,6 +41,13 @@ function Index() {
 
 /* ----------------------------- NAV ----------------------------- */
 function Nav() {
+  const [open, setOpen] = useState(false);
+  const links = [
+    { href: "#tesi", label: "Tesi" },
+    { href: "#modello", label: "Modello" },
+    { href: "#asset", label: "Asset" },
+    { href: "#metodo", label: "Metodo" },
+  ];
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/75 border-b hairline">
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 h-16 flex items-center justify-between">
@@ -47,13 +56,44 @@ function Nav() {
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
         </a>
         <nav className="hidden md:flex items-center gap-2 text-[13px]">
-          <a href="#tesi" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Tesi</a>
-          <a href="#modello" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Modello</a>
-          <a href="#asset" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Asset</a>
-          <a href="#metodo" className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">Metodo</a>
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="px-3.5 py-1.5 rounded-full bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors">{l.label}</a>
+          ))}
           <a href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza" className="ml-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cta-primary text-cta-primary-text hover:bg-cta-primary-hover transition-colors font-medium">Prenota una consulenza <span aria-hidden>→</span></a>
         </nav>
+        <button
+          type="button"
+          aria-label={open ? "Chiudi menu" : "Apri menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-full border border-cta-border bg-cta-soft text-cta-text hover:bg-cta-soft-hover transition-colors"
+        >
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </div>
+      {open && (
+        <div className="md:hidden border-t hairline bg-background/95 backdrop-blur-md">
+          <nav className="mx-auto max-w-[1320px] px-6 py-4 flex flex-col gap-2 text-[15px]">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="px-4 py-3 rounded-2xl bg-cta-soft border border-cta-border text-cta-text hover:bg-cta-soft-hover transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a
+              href="mailto:hello@asahi.it?subject=Prenota%20una%20consulenza"
+              onClick={() => setOpen(false)}
+              className="mt-1 inline-flex items-center justify-between gap-2 px-4 py-3 rounded-2xl bg-cta-primary text-cta-primary-text hover:bg-cta-primary-hover transition-colors font-medium"
+            >
+              Prenota una consulenza <span aria-hidden>→</span>
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
