@@ -259,7 +259,7 @@ function FourBlocks() {
     {
       n: "04",
       kicker: "Master",
-      title: "Formazione Avanzata",
+      title: "Asahi Academy",
       body: "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
       tag: "Team & AI Mentors",
     },
@@ -270,7 +270,7 @@ function FourBlocks() {
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-36">
         <SectionLabel n="02" label="Modello in 4 blocchi" />
         <h2 className="mt-8 font-serif text-[40px] md:text-[64px] leading-[1.02] tracking-[-0.02em] max-w-[900px] text-balance">
-          Quattro fronti, <span className="italic">un solo</span> obiettivo: adozione reale.
+          Quattro fasi, <span className="italic">un solo</span> obiettivo: rendere i team autonomi nell’uso dell’AI.
         </h2>
 
         <div className="mt-16 grid md:grid-cols-2 gap-px bg-rule border hairline">
@@ -421,8 +421,9 @@ function Footer() {
             <span className="font-serif italic text-[14px] text-ink-soft">— Humanizing Artificial Intelligence</span>
           </div>
           <p className="mt-5 text-[14px] text-ink-soft max-w-[420px] text-pretty">
-            AI Adoption-as-a-Service. Portiamo l’AI dove crei valore — partendo dai processi, con governance, persone e
-            risultati misurabili.
+            AI Adoption-as-a-Service.
+            <br />
+            Portiamo l’AI dove serve davvero, partendo dai processi, con governance, persone e risultati misurabili.
           </p>
         </div>
 
@@ -432,7 +433,7 @@ function Footer() {
             <li>Formazione Adoption</li>
             <li>Consulenza</li>
             <li>Software Factory</li>
-            <li>Formazione Avanzata</li>
+            <li>Asahi Academy</li>
           </ul>
         </div>
 
