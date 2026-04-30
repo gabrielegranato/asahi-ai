@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
         content:
           "Asahi è AI Adoption-as-a-Service: partiamo dai tuoi processi per costruire soluzioni AI utili, adottabili e misurabili. Formazione, consulenza, software factory.",
       },
-      { property: "og:title", content: "Asahi — Portiamo l'AI dove crei valore" },
+      { property: "og:title", content: "Asahi — Portiamo l'AI dove tu crei valore" },
       {
         property: "og:description",
         content:
