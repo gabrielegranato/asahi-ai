@@ -30,7 +30,7 @@ function Index() {
       <FourBlocks />
       <Assets />
       <Method />
-      <CTA />
+      
       <Footer />
     </div>
   );
