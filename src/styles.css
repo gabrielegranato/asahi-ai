@@ -205,15 +205,6 @@
       inset 0 0 14px color-mix(in oklab, var(--asahi-glow) 70%, transparent);
   }
 
-  .sun-rays {
-    background: repeating-conic-gradient(
-      from 0deg at 50% 50%,
-      var(--asahi) 0deg 5deg,
-      transparent 5deg 18deg
-    );
-    mask-image: radial-gradient(circle at center, transparent 0%, transparent 38%, black 46%, transparent 78%);
-  }
-
   .sun-halo {
     background: radial-gradient(circle at center,
       color-mix(in oklab, var(--asahi-glow) 70%, transparent) 0%,
