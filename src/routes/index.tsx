@@ -44,8 +44,8 @@ function Nav() {
         <a href="#top" className="flex items-center gap-3 group">
           <SunMark className="h-7 w-7" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
-          <span className="font-jp text-[11px] text-ink-soft hidden sm:inline tracking-[0.4em] pl-2 border-l hairline ml-1">
-            朝日
+          <span className="hidden sm:inline text-[10px] uppercase tracking-[0.32em] text-ink-soft pl-3 ml-1 border-l hairline">
+            Sunrise clarity
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[13px] text-ink-soft">
@@ -68,8 +68,42 @@ function Nav() {
 
 function SunMark({ className = "" }: { className?: string }) {
   return (
-    <span className={`relative inline-block ${className}`}>
-      <span className="absolute inset-0 rounded-full sun-disc sun-pulse" />
+    <span
+      className={`relative inline-block ${className}`}
+      aria-label="Asahi sun mark"
+      role="img"
+    >
+      <svg viewBox="0 0 64 64" className="absolute inset-0 w-full h-full" aria-hidden="true">
+        <defs>
+          <radialGradient id="asahiSun" cx="42%" cy="38%" r="62%">
+            <stop offset="0%" stopColor="oklch(0.96 0.05 80)" />
+            <stop offset="35%" stopColor="oklch(0.86 0.13 85)" />
+            <stop offset="72%" stopColor="oklch(0.74 0.16 55)" />
+            <stop offset="100%" stopColor="oklch(0.6 0.17 40)" />
+          </radialGradient>
+          <radialGradient id="asahiHalo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="oklch(0.92 0.08 75 / 0.55)" />
+            <stop offset="60%" stopColor="oklch(0.86 0.13 85 / 0.15)" />
+            <stop offset="100%" stopColor="transparent" />
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="url(#asahiHalo)" />
+        <circle cx="32" cy="32" r="18" fill="url(#asahiSun)" />
+        <circle
+          cx="32"
+          cy="32"
+          r="18"
+          fill="none"
+          stroke="oklch(0.6 0.17 40 / 0.35)"
+          strokeWidth="0.6"
+        />
+        <circle
+          cx="26"
+          cy="26"
+          r="4"
+          fill="oklch(0.96 0.05 80 / 0.55)"
+        />
+      </svg>
     </span>
   );
 }
