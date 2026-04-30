@@ -44,9 +44,6 @@ function Nav() {
         <a href="#top" className="flex items-center gap-3 group">
           <SunMark className="h-7 w-7" />
           <span className="font-serif text-[22px] tracking-tight leading-none">Asahi</span>
-          <span className="hidden sm:inline text-[10px] uppercase tracking-[0.32em] text-ink-soft pl-3 ml-1 border-l hairline">
-            Sunrise clarity
-          </span>
         </a>
         <nav className="hidden md:flex items-center gap-9 text-[13px] text-ink-soft">
           <a href="#tesi" className="hover:text-foreground transition">Tesi</a>
