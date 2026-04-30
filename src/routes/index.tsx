@@ -125,14 +125,9 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-20 md:pt-28 pb-24 md:pb-36 relative">
-        <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-ink-soft mb-10">
-          <span className="inline-block h-px w-8 ink-rule" />
-          AI Adoption-as-a-Service · Italia
-        </div>
-
         <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[88px] lg:text-[108px] leading-[0.95] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
-          <span className="italic">dove</span> crei <span className="relative inline-block">
+          <span className="italic">dove</span> <span className="italic">tu</span> crei <span className="relative inline-block">
             valore
             <span className="absolute left-0 right-0 -bottom-1 h-[6px] bg-asahi/80" />
           </span>.
@@ -161,15 +156,6 @@ function Hero() {
               <span className="text-xl">↓</span>
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* footer rule with meta */}
-      <div className="border-t hairline">
-        <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-4 flex flex-wrap items-center justify-between gap-4 text-[11px] uppercase tracking-[0.28em] text-ink-soft">
-          <span>Per CEO · CIO · CMO</span>
-          <span className="hidden md:inline">Processi → Governance → Persone → KPI</span>
-          <span>v. 2026</span>
         </div>
       </div>
     </section>
