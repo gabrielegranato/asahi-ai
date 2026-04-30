@@ -70,6 +70,13 @@
   --color-asahi-gold: var(--asahi-gold);
   --color-asahi-glow: var(--asahi-glow);
   --color-ink-warm: var(--ink-warm);
+  --color-cta-primary: var(--cta-primary);
+  --color-cta-primary-hover: var(--cta-primary-hover);
+  --color-cta-primary-text: var(--cta-primary-text);
+  --color-cta-soft: var(--cta-soft);
+  --color-cta-soft-hover: var(--cta-soft-hover);
+  --color-cta-border: var(--cta-border);
+  --color-cta-text: var(--cta-text);
   --font-serif: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter Tight", system-ui, sans-serif;
 }
