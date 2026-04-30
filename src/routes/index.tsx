@@ -403,37 +403,6 @@ function Method() {
   );
 }
 
-/* ----------------------------- CTA ----------------------------- */
-function CTA() {
-  return (
-    <section id="contatto" className="relative overflow-hidden">
-      <div className="pointer-events-none absolute right-[-180px] top-1/2 -translate-y-1/2 w-[520px] h-[520px] opacity-90">
-        <div className="absolute inset-0 sun-rays opacity-25" />
-        <div className="absolute inset-[20%] rounded-full sun-disc" />
-      </div>
-
-      <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-40 relative">
-
-        <div className="flex flex-wrap items-center gap-4">
-          <a
-            href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
-            className="inline-flex items-center gap-4 px-7 py-5 bg-foreground text-background hover:bg-asahi-deep transition-colors"
-          >
-            <span className="text-[15px] font-medium">Prenota la conversazione</span>
-            <span className="text-xl">→</span>
-          </a>
-          <a
-            href="#asset"
-            className="inline-flex items-center gap-3 px-7 py-5 border hairline hover:bg-paper-2 transition-colors text-[15px]"
-          >
-            Esplora gli asset proprietari
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ----------------------------- FOOTER ----------------------------- */
 function Footer() {
   return (
