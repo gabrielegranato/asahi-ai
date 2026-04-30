@@ -111,12 +111,8 @@ function Hero() {
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-14 md:pt-20 pb-20 md:pb-28 relative">
-        <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px]">
-          Portiamo l’AI <br className="hidden sm:block" />
-          dove <span className="italic">tu</span> crei <span className="relative inline-block">
-            valore
-            <span className="absolute left-0 right-0 -bottom-1 h-[6px] bg-asahi/80" />
-          </span>.
+        <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px] min-h-[2.2em]">
+          <TypewriterHeadline />
         </h1>
 
         <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
