@@ -145,18 +145,12 @@ function Hero() {
   return (
     <section id="top" className="relative overflow-hidden grain">
       {/* Sun composition — vertically centered with hero */}
-      <div className="pointer-events-none absolute right-[-18%] top-[56%] -translate-y-1/2 w-[500px] h-[500px] md:right-[-12%] md:top-1/2 md:w-[620px] md:h-[620px] lg:w-[720px] lg:h-[720px] opacity-80 md:opacity-95">
+      <div className="pointer-events-none absolute right-[-24%] top-[62%] -translate-y-1/2 w-[470px] h-[470px] md:right-[-12%] md:top-1/2 md:w-[620px] md:h-[620px] lg:w-[720px] lg:h-[720px] opacity-70 md:opacity-95">
         <div className="absolute inset-0 sun-halo" />
         <div className="absolute inset-[20%] rounded-full sun-disc sun-pulse" />
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 pt-14 md:pt-20 pb-20 md:pb-28 relative">
-        <div className="mb-6 flex items-center gap-3 text-asahi-deep">
-          <span className="inline-block h-px w-8 bg-asahi-deep/60" />
-          <span className="font-serif italic text-[15px] md:text-[17px] tracking-[-0.005em]">
-            Humanizing Artificial Intelligence
-          </span>
-        </div>
         <h1 className="font-serif font-light text-[44px] sm:text-[64px] md:text-[84px] lg:text-[104px] leading-[1.0] tracking-[-0.02em] text-balance max-w-[1100px]">
           Portiamo l’AI <br className="hidden sm:block" />
           dove <span className="italic">tu</span> crei <span className="relative inline-block">
@@ -166,8 +160,8 @@ function Hero() {
         </h1>
 
         <div className="mt-10 grid md:grid-cols-12 gap-8 md:gap-12 items-end">
-          <p className="md:col-span-6 text-[17px] md:text-[20px] leading-[1.75] tracking-[-0.005em] text-ink-soft text-pretty max-w-[34ch]">
-            Partiamo dai tuoi processi per costruire soluzioni AI utili, adottabili e misurabili. Creiamo autonomia, con metodo e risultati concreti.
+          <p className="md:col-span-6 text-[16px] md:text-[19px] leading-[1.8] tracking-[-0.003em] text-ink-soft text-pretty max-w-[32ch]">
+            Partiamo dai tuoi processi per costruire un’AI utile, adottabile e misurabile, lasciando competenze e controllo in azienda.
           </p>
 
           <div className="md:col-span-5 md:col-start-8 flex flex-col gap-3">
