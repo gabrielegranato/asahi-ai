@@ -241,7 +241,7 @@ function FourBlocks() {
     {
       n: "04",
       kicker: "Master",
-      title: "Formazione Avanzata",
+      title: "Asahi Academy",
       body:
         "Sviluppiamo competenze avanzate per team, AI Mentor e professionisti. Capacità che restano dentro l’azienda.",
       tag: "Team & AI Mentors",
