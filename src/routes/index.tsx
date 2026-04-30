@@ -413,20 +413,8 @@ function CTA() {
       </div>
 
       <div className="mx-auto max-w-[1320px] px-6 md:px-10 py-28 md:py-40 relative">
-        <SectionLabel n="05" label="Prossimo passo" />
-        <div className="mt-8 grid md:grid-cols-12 gap-10 items-end">
-          <h2 className="md:col-span-8 font-serif text-[44px] md:text-[80px] leading-[0.98] tracking-[-0.02em] text-balance">
-            Una conversazione. <br />
-            <span className="italic">Senza</span> impegno,
-            con <span className="text-asahi">direzione</span>.
-          </h2>
-          <p className="md:col-span-4 text-[17px] text-ink-soft text-pretty max-w-[420px]">
-            45 minuti con un partner Asahi per capire dove l’AI può creare
-            valore nei tuoi processi — e come arrivarci con governance e KPI.
-          </p>
-        </div>
 
-        <div className="mt-12 flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-4">
           <a
             href="mailto:hello@asahi.it?subject=Conversazione%20strategica"
             className="inline-flex items-center gap-4 px-7 py-5 bg-foreground text-background hover:bg-asahi-deep transition-colors"
