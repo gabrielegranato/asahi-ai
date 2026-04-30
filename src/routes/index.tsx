@@ -307,8 +307,9 @@ function FourBlocks() {
                 <span className="number-marker text-[44px] text-asahi leading-none">
                   {b.n}
                 </span>
-                <span className="font-jp text-[20px] text-ink-soft tracking-[0.2em]">
-                  {b.jp}
+                <span className="text-[10px] uppercase tracking-[0.32em] text-ink-soft inline-flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-asahi" />
+                  {b.kicker}
                 </span>
               </div>
               <h3 className="font-serif text-[28px] md:text-[34px] tracking-[-0.01em] leading-tight">
