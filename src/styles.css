@@ -156,8 +156,87 @@
     border-color: var(--color-border);
   }
 
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background: var(--asahi);
+    color: var(--paper);
   }
 }
+
+@layer utilities {
+  .font-serif { font-family: var(--font-serif); }
+  .font-jp { font-family: var(--font-jp); }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .hairline { border-color: var(--rule); }
+  .ink-rule { background: var(--ink); }
+
+  /* Vertical JP label */
+  .vertical-jp {
+    writing-mode: vertical-rl;
+    font-family: var(--font-jp);
+    letter-spacing: 0.4em;
+  }
+
+  /* Rising-sun radial */
+  .sun-disc {
+    background: radial-gradient(circle at center, var(--asahi) 0%, var(--asahi) 58%, transparent 60%);
+  }
+
+  .sun-rays {
+    background: repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      var(--asahi) 0deg 6deg,
+      transparent 6deg 18deg
+    );
+    mask-image: radial-gradient(circle at center, black 0%, black 35%, transparent 70%);
+  }
+
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+  }
+
+  .number-marker {
+    font-family: var(--font-serif);
+    font-feature-settings: "lnum";
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  /* Marquee */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    animation: marquee 40s linear infinite;
+    width: max-content;
+  }
+
+  @keyframes sun-pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.04); opacity: 0.92; }
+  }
+  .sun-pulse { animation: sun-pulse 7s ease-in-out infinite; }
+}
+
